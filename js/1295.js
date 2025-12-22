@@ -1,6 +1,5 @@
 const input = [12,345,2,6,7896]
 
-
 const findNumbers = function (nums) {
   let result = 0
   nums.forEach(x => {
