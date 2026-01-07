@@ -1,0 +1,2 @@
+SELECT user_id, UPPER(SUBSTRING(name FOR 1)) || LOWER(SUBSTRING(name FROM 2)) AS name
+FROM users;
