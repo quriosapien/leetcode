@@ -4,10 +4,11 @@
  * @return {number}
  */
 const maxDotProduct = function(nums1, nums2) {
+  const dp = Array.from({ length: nums1.length }, () => new Array(nums2.length).fill(-Infinity))
   
   const findDotProduct = function (i1, i2) {
-    // console.log('checking - ', i1, i2)
     if (i1 === nums1.length || i2 === nums2.length) return -Infinity
+    if (dp[i1][i2] !== -Infinity) return dp[i1][i2]
     
     const v1 = nums1[i1]
     const v2 = nums2[i2]
@@ -18,7 +19,7 @@ const maxDotProduct = function(nums1, nums2) {
     const longer = self + Math.max(0, findDotProduct(i1 +1, i2 + 1))
 
     console.log('checking - ', i1, i2, {self, right, bottom, longer})
-    return Math.max(self, right, bottom, longer)
+    return dp[i1][i2] = Math.max(self, right, bottom, longer)
   }
   
   return findDotProduct(0, 0)
