@@ -18,7 +18,6 @@ const maxDotProduct = function(nums1, nums2) {
     const bottom = findDotProduct(i1 + 1, i2)
     const longer = self + Math.max(0, findDotProduct(i1 +1, i2 + 1))
 
-    console.log('checking - ', i1, i2, {self, right, bottom, longer})
     return dp[i1][i2] = Math.max(self, right, bottom, longer)
   }
   
