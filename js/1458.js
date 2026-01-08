@@ -24,7 +24,6 @@ const maxDotProduct = function(nums1, nums2) {
   return findDotProduct(0, 0)
 }
 
-
 // add more test input values here
 // const nums1 = [-1, -1]
 // const nums2 = [1, 1]
