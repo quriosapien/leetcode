@@ -2,6 +2,7 @@ const minimumAbsDifference = function (arr: number[]): number[][] {
   arr.sort((a, b) => a - b);
   let minDiff = Math.abs(arr[0] - arr[1]);
   let pairs: number[][] = [];
+
   for (let i = 0; i < arr.length - 1; i++) {
     const absDiff = Math.abs(arr[i] - arr[i + 1]);
     if (absDiff < minDiff) {
